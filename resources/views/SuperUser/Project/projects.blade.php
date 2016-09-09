@@ -1,6 +1,4 @@
 @extends('layouts.app')
-@section('title') All Project @stop
-@section('projects') active @stop
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -55,13 +53,12 @@
                                 </tr>
                             </tfoot>
                         </table>
-                    </div>
-                    <!-- /.box-body -->
+                    </div><!-- /.box-body -->
                 </div>
             </div>
         </div>
     </section>
 </div>
 {{-- Including Popup Models --}}
-@include('layouts.Models.newProject')
+@include('layouts.ModalObjects.newProject')
 @stop

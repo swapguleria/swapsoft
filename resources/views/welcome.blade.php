@@ -73,6 +73,7 @@
                     <a href="{{ url('/login') }}">Login</a>
                     @else
                     <a href="{{ url('/') }}">Dashboard</a>
+                    <a class="btn btn-default btn-flat" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                     @endif
                     {{--<a href="{{ url('/register') }}">Register</a>--}}
                 </div>
@@ -93,4 +94,7 @@
             </div>
         </div>
     </body>
+    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
 </html>
