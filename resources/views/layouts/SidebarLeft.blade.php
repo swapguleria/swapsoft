@@ -1,0 +1,18 @@
+{{-- This is Side Bar Page  --}}
+@if (Auth::user()->type == "SuperUser")
+@include('SuperUser.Sidebar')
+@elseif(Auth::user()->type == "HR")
+@include('HR.Sidebar')
+@elseif(Auth::user()->type == "Bidder")
+@include('Bidder.Sidebar')
+@elseif(Auth::user()->type == "TL")
+@include('TL.Sidebar')
+@elseif(Auth::user()->type == "Developer")
+@include('Developer.Sidebar')
+@elseif(Auth::user()->type == "Fresher")
+@include('Fresher.Sidebar')
+@elseif(Auth::user()->type == "Tester")
+@include('Tester.Sidebar')
+@elseif(Auth::user()->type == "IT")
+@include('IT.Sidebar')
+@endif
