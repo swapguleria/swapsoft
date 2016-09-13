@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('senior_assigned')->nullable();
             $table->string('experiance')->nullable();
             $table->string('about')->nullable();
+            $table->string('dp')->nullable();
             $table->string('type')->nullable();
             $table->rememberToken();
             $table->timestamps();

@@ -143,7 +143,7 @@ Route::group(['middleware' => 'web'], function() {
         Route::group(['prefix' => 'developer', 'middleware' => 'Developer'], function() {
             Route::get('/dashboard', function() {
                 return view('Developer.dashboard');
-            });
+            })->name('Dev-Dashboard');
         });
 
         /*
@@ -186,7 +186,8 @@ Route::group(['middleware' => 'web'], function() {
          * |--------------------------------------------------------------------------------------------------------------
          */
         Route::group(['prefix' => 'ajax'], function() {
-            Route::resource('/view/team', 'AngularRequestHandler@ViewTeam');
+            Route::resource('/view/all/team', 'AngularRequestHandler@ViewTeam');
+            Route::resource('/view/all/superuser', 'AngularRequestHandler@ViewSuperUser');
         });
     });
 });

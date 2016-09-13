@@ -27,7 +27,7 @@ class RedirectIfAuthenticated {
             } elseif (Auth::user()->type == 'TL') {
                 return redirect('/tl/dashboard');
             } elseif (Auth::user()->type == 'Developer') {
-                return redirect('/developer/dashboard');
+                return redirect('/');//->route('Dev-Dashboard');
             } elseif (Auth::user()->type == 'Fresher') {
                 return redirect('/fresher/dashboard');
             } elseif (Auth::user()->type == 'Tester') {
